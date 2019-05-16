@@ -64,6 +64,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- spring-boot專案匯出的jar會多出一個目錄BOOT-INF，這會造成引入該jar包時找不到對應package，需以下設定 -->
+				<configuration>
+			        <skip>true</skip>
+			    </configuration>
 			</plugin>
 		</plugins>
 	</build>
